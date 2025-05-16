@@ -1,0 +1,207 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Product Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header id="header">
+    <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Product Logo" />
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#video-section">Video</a>
+      <a class="nav-link" href="#form-section">Subscribe</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="features">
+      <h2>Product Features</h2>
+      <ul>
+        <li>Fast and reliable performance</li>
+        <li>Easy to use interface</li>
+        <li>24/7 Customer support</li>
+      </ul>
+    </section>
+
+    <section id="video-section">
+      <h2>Watch Our Product Video</h2>
+      <iframe 
+        id="video" 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Product Video" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="form-section">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <input 
+          id="email" 
+          name="email" 
+          type="email" 
+          placeholder="Enter your email" 
+          required />
+        <input 
+          id="submit" 
+          type="submit" 
+          value="Subscribe" />
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+/* Basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding-top: 70px; /* leave space for sticky nav */
+}
+
+/* Header styling */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* Logo image */
+#header-img {
+  height: 40px;
+}
+
+/* Navigation bar using flexbox */
+#nav-bar {
+  display: flex;
+  gap: 20px;
+}
+
+/* Nav links */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f90;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 50px;
+}
+
+/* Video styling */
+#video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Form styling using flexbox */
+#form {
+  display: flex;
+  gap: 10px;
+  max-width: 400px;
+}
+
+#email {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+#email:focus {
+  border-color: #f90;
+  outline: none;
+}
+
+#submit {
+  background-color: #f90;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #e68a00;
+}
+
+/* Responsive media query */
+@media (max-width: 600px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid #444;
+  }
+
+  #form {
+    flex-direction: column;
+  }
+
+  #submit {
+    width: 100%;
+  }
+}
+
+
+** end of styles.css **
+
